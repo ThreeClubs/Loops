@@ -80,18 +80,16 @@ const secretNumber = 11;
 //   console.log(`It's a ${guess}`);
 // }
 
-
 // create a while loop that logs to the console the guesses and uses conditional
 // logic where if user gets the right number it logs a success message
 
 while (guess != secretNumber) {
   guess = prompt("Please guess a number between 1-12! 🎲");
-if (guess === null) {
-   break;
-}
-else if (guess == secretNumber) {
-  console.log("Well done! You got it, mate!");
-} else {
+  if (guess === null) {
+    break;
+  } else if (guess == secretNumber) {
+    console.log("Well done! You got it, mate!");
+  }
   console.log(`Nice try but ${guess} is wrong... 😢 `);
 }
 
@@ -102,7 +100,6 @@ else if (guess == secretNumber) {
 //   // }
 //   guess == secretNumber ? console.log("Well done! You got it, mate!") break
 //  : console.log(`Nice try but ${guess} is wrong... 😢 `);
-}
 
 // make if else ternary
 
@@ -210,7 +207,7 @@ for (let fake of friends) {
   console.log(
     `${fake} sounds like a fake name. Do you have any real friends, Andrew?`
   );
- console.log("I'm sorry, you don't seem to have any real friends");
+  console.log("I'm sorry, you don't seem to have any real friends");
 }
 
 // for in loop ---> for looping over elements of an object/s
@@ -218,7 +215,7 @@ for (let fake of friends) {
 const student = {
   name: "Rob",
   age: 25,
-  isAdmin: true
+  isAdmin: true,
 };
 
 for (const key in student) {
@@ -229,11 +226,11 @@ for (const key in student) {
 const user = {
   name: "John",
   age: 5,
-  isAdmin: true
+  isAdmin: true,
 };
 
 for (const getAge in user) {
   if (getAge == "age") {
     console.log(student[getAge]);
-  } 
+  }
 }
